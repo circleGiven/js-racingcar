@@ -1,3 +1,3 @@
-import { initialize } from './view/App.js';
+import initialize from './view/App.js';
 
 initialize();

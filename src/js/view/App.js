@@ -43,4 +43,4 @@ function initialize() {
   RacingSectionView.initialize();
 }
 
-export { initialize };
+export default initialize;
