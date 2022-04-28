@@ -5,7 +5,7 @@ const CarStatus = Object.freeze({
   MOVING: 'MOVING',
 });
 
-const carName = Object.freeze({
+const CarName = Object.freeze({
   MIN_LENGTH: 1,
   MAX_LENGTH: 5,
 });
@@ -16,9 +16,9 @@ function isEmptyCarName(name) {
 }
 
 function isInValidCarNameLength(name) {
-  if (!(name.length >= carName.MIN_LENGTH && name.length <= carName.MAX_LENGTH))
+  if (!(name.length >= CarName.MIN_LENGTH && name.length <= CarName.MAX_LENGTH))
     throw new Error(
-      `이름은 ${carName.MIN_LENGTH}~${carName.MAX_LENGTH} 까지 가능합니다.`
+      `이름은 ${CarName.MIN_LENGTH}~${CarName.MAX_LENGTH} 까지 가능합니다.`
     );
 }
 
