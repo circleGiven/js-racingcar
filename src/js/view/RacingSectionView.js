@@ -79,23 +79,19 @@ const RacingSectionView = (function () {
   }
 
   function runningLapByCycle({ cycle, carList }) {
-    return new Promise((resolve, reject) => {
+    return new Promise((resolve) => {
       let i = 0;
       const lastLap = Number(cycle);
 
-      try {
-        const running = setInterval(() => {
-          if (i === lastLap) {
-            clearInterval(running);
-            resolve();
-            return;
-          }
-          runningLap(carList);
-          i += 1;
-        }, 1000);
-      } catch (e) {
-        reject(e);
-      }
+      const running = setInterval(() => {
+        if (i === lastLap) {
+          clearInterval(running);
+          resolve();
+          return;
+        }
+        runningLap(carList);
+        i += 1;
+      }, 1000);
     });
   }
 
